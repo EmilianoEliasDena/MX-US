@@ -74,13 +74,17 @@ OGAP_MXm <- yth_filter(x = as.xts(GDP_MXm_sa),
 
 autoplot(OGAP_MXm*100)
 
+###     Stationary Check
 tseries::adf.test(OGAP_MXm)
 tseries::pp.test(OGAP_MXm)
 
+###     SARIMA model
 model <- forecast::auto.arima(y = OGAP_MXm, 
                      ic = "bic", 
                      trace = TRUE, 
                      approximation = FALSE)  
 checkresiduals(model)
+
+###     Forecast
 forecast <- forecast(model)  
 autoplot(forecast)
