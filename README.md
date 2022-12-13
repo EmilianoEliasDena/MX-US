@@ -13,7 +13,7 @@ Usage
 To use this script, follow these steps:
 
     Clone or download this repository to your local machine
-    Open main.R in R or RStudio
+    Open GDP_MX.R in R or RStudio
     Set your Banco de Mexico SIE API key in the Bapi variable
     Run the script
 
